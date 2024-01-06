@@ -9,4 +9,18 @@ end)
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
+require('lspconfig').gopls.setup({
+    cmd = {"gopls"},
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+                unusedparams = true,
+            },
+            gofumpt = true,
+        }
+    }
+})
+
 lsp.setup()
