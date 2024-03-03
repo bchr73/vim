@@ -39,4 +39,7 @@ return require('packer').startup(function(use)
 
   use 'lervag/vimtex'
 
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
+
 end)
